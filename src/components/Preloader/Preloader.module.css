@@ -1,0 +1,45 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+}
+
+.panels {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+
+.panel {
+  flex: 1;
+  background: var(--ink);
+  border-right: 1px solid var(--ink-line);
+}
+
+.panel:last-child {
+  border-right: none;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: var(--gutter);
+  pointer-events: none;
+}
+
+.mark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--paper);
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--signal);
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,62 @@
+.experience {
+  border-top: 1px solid var(--ink-line);
+}
+
+.heading {
+  margin-top: 1.4rem;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  font-weight: 550;
+}
+
+.list {
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 140px 1fr 1.2fr;
+  gap: 2rem;
+  align-items: baseline;
+  padding: 1.8rem 0;
+  border-top: 1px solid var(--ink-line);
+  transition: background-color 0.3s var(--ease-out);
+}
+
+.row:last-child {
+  border-bottom: 1px solid var(--ink-line);
+}
+
+.row:hover {
+  background: var(--ink-soft);
+}
+
+@media (max-width: 760px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}
+
+.year {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--signal);
+}
+
+.role {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.org {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--stone);
+}
+
+.description {
+  color: var(--paper-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem var(--gutter) 2.5rem;
+  font-size: 0.82rem;
+  color: var(--stone);
+  border-top: 1px solid var(--ink-line);
+}
+
+.top {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--paper-dim);
+  transition: color 0.25s var(--ease-out);
+}
+
+.top:hover {
+  color: var(--signal);
+}

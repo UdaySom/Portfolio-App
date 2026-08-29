@@ -1,0 +1,78 @@
+.skills {
+  border-top: 1px solid var(--ink-line);
+}
+
+.heading {
+  max-width: 780px;
+  margin-top: 1.4rem;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  font-weight: 550;
+  color: var(--paper);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--ink-line);
+  margin-top: clamp(3rem, 7vw, 5rem);
+  border: 1px solid var(--ink-line);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--ink-soft);
+  padding: 2rem 1.6rem;
+  transition: background-color 0.3s var(--ease-out);
+}
+
+.card:hover {
+  background: #17171a;
+}
+
+.cardIndex {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--signal);
+}
+
+.cardTitle {
+  margin-top: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.tags {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.tags li {
+  font-size: 0.9rem;
+  color: var(--paper-dim);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.tags li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 5px;
+  height: 1px;
+  background: var(--stone);
+}

@@ -1,0 +1,100 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: calc(var(--nav-h) + 1.5rem) var(--gutter) 3rem;
+  overflow: hidden;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--ink-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ink-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: 0.35;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 40%, transparent 90%);
+}
+
+.glow {
+  position: absolute;
+  top: -20%;
+  left: 55%;
+  width: 60vw;
+  height: 60vw;
+  max-width: 900px;
+  max-height: 900px;
+  background: radial-gradient(circle, var(--signal-soft) 0%, transparent 65%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.location {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--stone);
+}
+
+.headline {
+  position: relative;
+  font-size: clamp(3rem, 10vw, 8.5rem);
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+.headline .outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--paper);
+}
+
+.bottom {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.bio {
+  max-width: 480px;
+  color: var(--paper-dim);
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  line-height: 1.6;
+}
+
+.scrollCue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  border: 1px solid var(--ink-line);
+  border-radius: 999px;
+  padding: 0.9rem 1.4rem;
+  white-space: nowrap;
+  transition: border-color 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.scrollCue:hover {
+  border-color: var(--signal);
+  color: var(--signal);
+}
+
+@media (max-width: 640px) {
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

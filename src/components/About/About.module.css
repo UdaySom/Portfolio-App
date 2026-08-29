@@ -1,0 +1,110 @@
+.about {
+  border-top: 1px solid var(--ink-line);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statement {
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  font-weight: 550;
+  color: var(--paper);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4rem;
+  padding-top: 0.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--paper-dim);
+  border: 1px solid var(--ink-line);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+}
+
+.pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 0 0 var(--signal-soft);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 46, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 77, 46, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 46, 0);
+  }
+}
+
+.resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--ink-line);
+  transition: border-color 0.25s var(--ease-out), color 0.25s var(--ease-out);
+}
+
+.resume:hover {
+  color: var(--signal);
+  border-color: var(--signal);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: clamp(3rem, 8vw, 6rem);
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--ink-line);
+}
+
+@media (max-width: 700px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.statValue {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 650;
+  color: var(--signal);
+  font-variant-numeric: tabular-nums;
+}
+
+.statLabel {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--stone);
+}

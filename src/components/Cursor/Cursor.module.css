@@ -1,0 +1,64 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  margin-top: -9px;
+  border-radius: 50%;
+  border: 1px solid var(--paper);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.28s var(--ease-out), height 0.28s var(--ease-out),
+    margin 0.28s var(--ease-out), background-color 0.28s var(--ease-out),
+    border-color 0.28s var(--ease-out);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.2s var(--ease-out);
+}
+
+.hover,
+.view {
+  width: 64px;
+  height: 64px;
+  margin-left: -32px;
+  margin-top: -32px;
+  background-color: var(--paper);
+}
+
+.hover .label,
+.view .label {
+  opacity: 1;
+}
+
+.drag {
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  background-color: var(--signal);
+  border-color: var(--signal);
+}
+
+.drag .label {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .cursor {
+    display: none;
+  }
+}

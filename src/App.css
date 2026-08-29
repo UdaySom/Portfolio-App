@@ -1,0 +1,20 @@
+#root {
+  position: relative;
+}
+
+@media (pointer: fine) {
+  #root {
+    cursor: none;
+  }
+
+  #root a,
+  #root button {
+    cursor: none;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  background: var(--ink);
+}

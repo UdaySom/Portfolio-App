@@ -8,16 +8,6 @@
   overflow: hidden;
 }
 
-.grid {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(var(--ink-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--ink-line) 1px, transparent 1px);
-  background-size: 64px 64px;
-  opacity: 0.35;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 40%, transparent 90%);
-}
-
 .glow {
   position: absolute;
   top: -20%;
@@ -28,6 +18,7 @@
   max-height: 900px;
   background: radial-gradient(circle, var(--signal-soft) 0%, transparent 65%);
   filter: blur(10px);
+  mix-blend-mode: screen;
   pointer-events: none;
 }
 

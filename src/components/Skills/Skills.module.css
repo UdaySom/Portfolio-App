@@ -1,5 +1,11 @@
 .skills {
   border-top: 1px solid var(--ink-line);
+  overflow: hidden;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
 }
 
 .heading {

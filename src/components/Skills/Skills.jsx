@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { skillGroups } from "../../data/content";
 import RevealText from "../RevealText/RevealText";
+import SectionBackground from "../SectionBackground/SectionBackground";
+import skillsImg from "../../assets/images/skills.jpg";
 import styles from "./Skills.module.css";
 
 const card = {
@@ -15,7 +17,8 @@ const card = {
 export default function Skills() {
   return (
     <section id="skills" className={`section ${styles.skills}`}>
-      <div className="container">
+      <SectionBackground src={skillsImg} />
+      <div className={`container ${styles.inner}`}>
         <span className="eyebrow">Capabilities</span>
         <h2 className={styles.heading}>
           <RevealText text="Tools I reach for when turning ideas into interfaces." />

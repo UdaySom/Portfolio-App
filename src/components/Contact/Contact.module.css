@@ -4,6 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
 }
 
 .contact :global(.eyebrow) {

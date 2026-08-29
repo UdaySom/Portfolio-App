@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { personal } from "../../data/content";
 import RevealText from "../RevealText/RevealText";
 import Magnetic from "../Magnetic/Magnetic";
+import SectionBackground from "../SectionBackground/SectionBackground";
+import contactImg from "../../assets/images/contact.jpg";
 import styles from "./Contact.module.css";
 
 function useClock() {
@@ -24,7 +26,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className={`section ${styles.contact}`}>
-      <div className="container">
+      <SectionBackground src={contactImg} />
+      <div className={`container ${styles.inner}`}>
         <span className="eyebrow">Contact</span>
 
         <h2 className={styles.heading}>

@@ -5,6 +5,8 @@ import { useSmoothScroll } from "../../context/SmoothScrollContext";
 import { personal } from "../../data/content";
 import RevealText from "../RevealText/RevealText";
 import Magnetic from "../Magnetic/Magnetic";
+import SectionBackground from "../SectionBackground/SectionBackground";
+import heroImg from "../../assets/images/hero.jpg";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -29,7 +31,7 @@ export default function Hero() {
 
   return (
     <section id="home" className={styles.hero}>
-      <div className={styles.grid} aria-hidden="true" />
+      <SectionBackground src={heroImg} priority />
       <div className={styles.glow} ref={glowRef} aria-hidden="true" />
 
       <div className={styles.top}>
